@@ -1,5 +1,6 @@
 const v = require("./koans/variable");
 const t = require("./koans/types");
+const a = require("./koans/array");
 const { expect } = require("chai");
 
 describe("변수와 자료형", function () {
@@ -8,8 +9,6 @@ describe("변수와 자료형", function () {
     const result = v.variable();
     expect(result).to.be.equal("안녕하세요. 제 이름은 김코딩입니다.")
   });
-
-
   it("연산자와 변수를 합성하는 방법에 대해 알아봅시다.😁", function () {
     const result = v.addVariable()[0];
     const name = v.addVariable()[1];
@@ -42,5 +41,10 @@ describe("변수와 자료형", function () {
     const result = t.printStringAndNumber();
     expect(typeof result[0]).to.be.equals('string');
     expect(typeof result[1]).to.be.equals('number');
+  })
+  it("1~9까지의 합을 forEach메소드를 활용해서 계산해보세요.", function () {
+    const result = a.forEach();
+    expect(result).to.be.equals(45);
+    // expect(typeof result[1]).to.be.equals('number');
   })
 });

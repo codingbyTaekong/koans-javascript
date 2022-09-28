@@ -14,40 +14,40 @@ module.exports = {
                   [0,1,2,3,4,5] 처럼 순서가 있는 데이터 꾸러미
         2. 객체 : key-value가 쌍으로 이루어져 있는, 순서가 없는 데이터 꾸러미
     */
+
+
+    /**
+    *- boolean형을 담고 있는 변수를 생성해보세요.
+       isActive라는 변수는 true 혹은 false의 값을 가져야 합니다.
+   */
     printBoolean : function () {
-        /*
-        - boolean형을 담고 있는 변수를 생성해보세요.
-            isActive라는 변수는 true 혹은 false의 값을 가져야 합니다.
-        */
        let isActive;
        return isActive;
     },
+    /**
+    * - null값을 담고 있는 변수를 생성해보세요.
+        개발과정에서 개발자가 의도적으로 null 값을 할당하는 경우가 있습니다.
+        개발을 하다보면 어떨 때 사용하면 좋을지 자연스럽게 알게 됩니다.
+    */
     printNull : function() {
-        /*
-        - null값을 담고 있는 변수를 생성해보세요.
-            개발과정에서 개발자가 의도적으로 null 값을 할당하는 경우가 있습니다.
-            개발을 하다보면 어떨 때 사용하면 좋을지 자연스럽게 알게 됩니다.
-        */
         let isNull = null;
         return isNull;
     },
+    /**
+    *- undefined 값을 담고 있는 변수를 생성해보세요.
+        변수를 생성한 후 값을 할당하지면 해당 변수는 undefined가 출력됩니다.
+    */
     printUndefined : function() {
-        /*
-        - undefined 값을 담고 있는 변수를 생성해보세요.
-            변수를 생성한 후 값을 할당하지면 해당 변수는 undefined가 출력됩니다.
-        */
         let isUndefined;
         return isUndefined;
     },
 
+    /**
+    *- 숫자와 문자열을 담고 있는 변수를 생성해보세요.
+    */
     printStringAndNumber : function() {
-        /*
-        - 숫자와 문자열을 담고 있는 변수를 생성해보세요.
-        */
         let myString;
         let myNumber;
         return [myString, myNumber];
     }
-
-
 }
