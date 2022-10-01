@@ -42,9 +42,20 @@ describe("변수와 자료형", function () {
     expect(typeof result[0]).to.be.equals('string');
     expect(typeof result[1]).to.be.equals('number');
   })
+});
+
+describe("배열 기초", function () {
+  it("배열의 길이를 리턴하는 함수를 작성해보세요.", function () {
+    const testArr_1 = [0,1,2,3,4,5,6,7];
+    const testArr_1_len = a.length(testArr_1);
+    const testArr_2 = [null, null, undefined, undefined];
+    const testArr_2_len = a.length(testArr_2);
+    expect(testArr_1_len).to.be.equals(8);
+    expect(testArr_2_len).to.be.equals(4);
+  })
   it("1~9까지의 합을 forEach메소드를 활용해서 계산해보세요.", function () {
     const result = a.forEach();
     expect(result).to.be.equals(45);
     // expect(typeof result[1]).to.be.equals('number');
   })
-});
+})
