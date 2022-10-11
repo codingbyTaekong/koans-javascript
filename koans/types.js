@@ -30,7 +30,7 @@ module.exports = {
         개발을 하다보면 어떨 때 사용하면 좋을지 자연스럽게 알게 됩니다.
     */
     printNull : function() {
-        let isNull = null;
+        let isNull;
         return isNull;
     },
     /**
@@ -38,7 +38,7 @@ module.exports = {
         변수를 생성한 후 값을 할당하지면 해당 변수는 undefined가 출력됩니다.
     */
     printUndefined : function() {
-        let isUndefined;
+        let isUndefined = "";
         return isUndefined;
     },
 
@@ -49,5 +49,18 @@ module.exports = {
         let myString;
         let myNumber;
         return [myString, myNumber];
-    }
+    },
+    /**
+     * 참고자료
+     * 
+     * 
+     * 이미 선언한 문자열 혹은 숫자의 타입을 특정 메서드를 통해 변환할 수 있습니다.
+     * ex) let number = 100;
+     * console.log(typeof number) ====> output : number
+     * console.log(typeof String(number)) ===> output : string
+     * 
+     * let number = "100";
+     * console.log(typeof number) ====> output : string
+     * console.log(typeof number(number)) ===> output : number
+     */
 }

@@ -35,24 +35,29 @@ module.exports = {
      * 배열에는 여러가지 메소드가 있습니다.
      * 반복 메서드인 forEach를 알아봅시다.
      * forEach 메서드는 배열의 첫 번째 요소부터 마지막 요소까지 각각에 대해 실행합니다.
+     * 
+     * 문제 : 
+     *  forEach 반복문을 활용해서 전달인자로 들어온 배열의 모든 요소의 합을 리턴하는 함수를 만드세요.
      * @returns sum 
      */
-    forEach : function () {
-        
-        const temp = [1,2,3,4,5,6,7,8,9];
-        let sum = 0;
-        // forEach 반복문을 활용해서 1 ~ 9까지의 합을 리턴하는 함수를 만드세요.
+    sum : function (arr) {
+        let sum = 45;
+        //
         return sum;
     },
     /**
      * map 메서드는 forEach와 유사하지만 조금은 다른 메서드입니다.
      * forEach 메서드는 배열의 첫 번째 요소부터 마지막 요소까지 각각 실행하는 메서드에 반해,
      * map 메서드는 배열의 첫 번째 요소부터 마지막 요소까지 각각 실행한 후 새로운 배열을 리턴하는 메서드입니다.
+     * 
+     * 문제 :
+     * 전달인자로 들어오는 arr의 모든 요소에 + 5를 더한 뒤 리턴하는 함수를 만드세요
      * @param {*} number 
      */
-    map : function () {
-        // 전달인자로 들어오는 number값을 천단위로 쉼표를 찍어서 리턴해주세요.
+    addFive : function (arr) {
+        let newArr = [];
 
+        return newArr;
     },
     filter : function() {
 

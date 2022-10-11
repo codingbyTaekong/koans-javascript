@@ -54,8 +54,15 @@ describe("배열 기초", function () {
     expect(testArr_2_len).to.be.equals(4);
   })
   it("1~9까지의 합을 forEach메소드를 활용해서 계산해보세요.", function () {
-    const result = a.forEach();
+    const result = a.sum([0,1,2,3,4,5,6,7,8,9]);
     expect(result).to.be.equals(45);
     // expect(typeof result[1]).to.be.equals('number');
   })
+
+  it("전달인자로 들어오는 arr의 모든 요소에 + 5를 더한 뒤 리턴하는 함수를 만드세요.", function () {
+    let myArr = [0,1,2,3,4,5,6,7,8,9];
+    const result = a.addFive(myArr);
+    expect(result).to.have.members(myArr.map(el=> el+5))
+  })
 })
+
