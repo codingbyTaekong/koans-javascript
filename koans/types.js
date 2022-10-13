@@ -50,6 +50,64 @@ module.exports = {
         let myNumber;
         return [myString, myNumber];
     },
+
+    /**
+     * mdn 사이트에서 예제를 확인하세요!
+     * https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+     * @param {string} string 
+     * 
+     * 파라미터로 들어오는 문자열을 대문자로 변환해서 반환하세요.
+     * 
+     * 예시:)
+     * 인풋 : hello world
+     * 아웃풋 : HELLO WORLD
+     * 
+     * 문자열을 소문자로 바꿔주는 함수에 대해서도 찾아서 공부해보세요.
+     */
+    toUpperCase : function (string) {
+        let result = ""
+
+        return result
+    },
+    /**
+     * 띄어쓰기를 기준으로 몇 단어를 작성했는지 알려주는 함수를 작성해보세요.
+     * mdn 사이트에서 string.split() 메서드에 대해 찾아보면 쉽게 풀 수 있습니다!
+     * 
+     * @param {string} str 
+     * @returns {number}
+     * 
+     * 예시:)
+     * 인풋 : hello world
+     * 아웃풋 : 2
+     * 
+     * 띄어쓰기를 기준으로 단어를 나눈다고 했으니 'hello'와 'world' 두 개의 단어가 있습니다.
+     */
+    printWordslength : function (str) {
+        let result = ""
+        return result;
+    },
+    /**
+     * 문장과 찾고 싶은 단어가 주어지고, 
+     * 찾고자 하는 단어가 문장에 포함되어 있는 경우,
+     * 문장 속에서 단어가 시작되는 위치를 반환하는 함수를 작성해보세요.
+     * 
+     * string.indexOf() 메서드에 대해 공부해보세요!
+     * 
+     * @param {string} sentence 
+     * @param {string} word 
+     * @returns {number}
+     * 
+     * 예시:)
+     * 인풋:
+     * sentence : 나는 쉬는 날에 코딩을 하거나, 운동을 하면서 지내!
+     * word : 코딩
+     * 아웃풋 : 9
+     */
+    findIndexOfWord : function (sentence, word) {
+        let result;
+        return result
+    }
+    
     /**
      * 참고자료
      * 

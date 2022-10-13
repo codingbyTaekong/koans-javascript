@@ -41,7 +41,7 @@ module.exports = {
      * @returns sum 
      */
     sum : function (arr) {
-        let sum = 45;
+        let sum = 0;
         //
         return sum;
     },
@@ -59,13 +59,18 @@ module.exports = {
 
         return newArr;
     },
-    filter : function() {
+    /**
+     * filter 메서드는 배열의 첫 번째 요소부터 마지막 요소까지 각각 실행하면서 조건에 부합하여 true 값을 전달받은 요소들만을 반환하는 메서드입니다.
+     * 문제 :
+     * 전달인자로 들어오는 arr의 요소 중 짝수만 리턴하는 함수를 만드세요
+     * 
+     * 예시
+     * 인풋 : [0,1,2,3,4,5,6]
+     * 아웃풋 : [2,4,6]
+     */
+    filter : function(arr) {
+        let newArr = [];
 
+        return newArr;
     },
-    slice : function() {
-
-    },
-    toString : function() {
-
-    }
 }
