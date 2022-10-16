@@ -11,7 +11,9 @@
 </head>
 <body>
   <div id="mocha">
-    <h1>JavaScript Koans에 오신 것을 환영합니다. 통과해야 하는 테스트는 총 50개입니다.</h1>
+    <h1>자바스크립트 기초테스트에 오신 것을 환영합니다. 현재 통과해야 하는 테스트는 총 20개입니다.</h1>
+    <p>매주 문제가 업데이트 될 예정이니, git을 통해 매주 업데이트 되는 테스트를 통과해보세요</p>
+    <p>git 주소 : <a href="https://github.com/codingbyTaekong/koans-javascript">https://github.com/codingbyTaekong/koans-javascript</a></p>
   </div>
   <script 
     src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.2.0/chai.min.js"
@@ -24,7 +26,7 @@
     crossorigin="anonymous">
   </script>
   <script class="mocha-init">
-    mocha.setup('bdd');
+    mocha.setup('bdd', {ignoreLeaks: true});
     mocha.checkLeaks();
     let expect = chai.expect;
     let FILL_ME_IN = 'Fill this value in';

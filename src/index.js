@@ -1,6 +1,9 @@
 const v = require("../koans/variable");
 const t = require("../koans/types");
 const a = require("../koans/array");
+const o = require('../koans/object');
+const f = require('../koans/function');
+// const { expect } = require("chai");
 describe("변수와 자료형", function () {
   this.timeout(5000);
   it("변수를 선언하는 방법에 대해 알아봅시다.😁", function (done) {
@@ -76,6 +79,56 @@ describe("배열 기초", function () {
     let myArr = [0,1,2,3,4,5,6,7,8,9];
     const result = a.addFive(myArr);
     expect(result).to.have.members(myArr.map(el=> el+5))
+  })
+
+  it("전달인자로 들어오는 arr의 요소 중 짝수만 리턴하는 함수를 만드세요", function(){
+    let numbers = [0,1,2,4,5,3,6,8,4,7,10,16,14,15,21,22,24];
+
+    const result = a.filter(numbers);
+    expect(result).to.have.members(numbers.filter(el => el % 2 === 0 ? true : false));
+  })  
+})
+describe("함수 기초", function () {
+  it("x, y를 전달받아서 x,y 값을 곱한 결과를 리턴하는 함수를 작성해보세요.", function(){
+    const result = f.declareFunction();
+    expect(typeof result).to.be.equals('function');
+    expect(result(5, 10)).to.be.equals(50);
+  })
+})
+
+describe("객체 기초", function () {
+  it("어벤져스에 출연하는 캐릭터와 배우이름을 쌍으로 갖는 객체를 생성해보세요.", function(){
+    const result = o.declareObject_1();
+    expect(result).to.deep.include({
+      IronMan : "Robert John Downey Jr.",
+      CaptainAmerica : "Christopher Robert Evans",
+      Hulk : "Mark Alan Ruffalo",
+      Thor : "Chris Hemsworth"
+    })
+  })
+  it("전달인자로 들어온 arr 객체로 변환하여 리턴하는 함수를 작성해보세요.", function(){
+    const result = o.declareObject_2("최태호", 30, "프로그래머", "더픽트", 100);
+    expect(result).to.deep.include({
+      name : "최태호",
+      level : 30,
+      job : "프로그래머",
+      lastPoint : "더픽트",
+      ranking : 100
+    })
+  })
+
+  it("특정 객체에서 함수를 값으로 갖는 경우 이를 무엇이라고 표현하나요?", function(){
+    const result = o.whatisMethod();
+    expect(result).to.be.equals(4);
+  })
+
+  it("자바스크립트에서는 브라우저를 가리키는 특정 객체가 있습니다. 해당 객체의 이름은 무엇일까요?", function(){
+    const result = o.selectBrowser();
+    expect(result).to.be.equals(2);
+  })
+  it("자바스크립트에서는 DOM이라는 객체가 있습니다. 해당 객체의 이름은 무엇일까요?", function(){
+    const result = o.selectDom();
+    expect(result).to.be.equals(3);
   })
 })
 

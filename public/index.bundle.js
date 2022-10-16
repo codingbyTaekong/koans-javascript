@@ -82,6 +82,127 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./koans/function.js":
+/*!***************************!*\
+  !*** ./koans/function.js ***!
+  \***************************/
+/***/ ((module) => {
+
+/**
+ * 
+함수는 입력 값에 따라 출력 값을 만들어내는 블랙 박스와 동일합니다.
+
+일상생활에서도 우리는 함수 블랙 형태의 물건들을 볼 수 있습니다.
+동전을 넣고 원하는 것을 누르면 해당 물건이 나오는 자판기,
+음식을 넣고 버튼을 누르면 음식이 갈리는 믹서기, ATM기 등이 무심코 사용했던 모든 물건들이 모두 함수의 형태와 비슷하거나 같다고 생각하시면 됩니다.
+ */
+
+module.exports = {
+  /**
+   * 함수는 인풋과 아웃풋이 있습니다.
+   * x, y를 전달받아서 x,y 값을 곱한 결과를 리턴하는 함수를 작성해보세요.
+   */
+  declareFunction: function declareFunction() {
+    return '';
+  }
+  /**
+   * 
+   */
+};
+
+/***/ }),
+
+/***/ "./koans/object.js":
+/*!*************************!*\
+  !*** ./koans/object.js ***!
+  \*************************/
+/***/ ((module) => {
+
+/**
+ * 
+ * 자바스크립트에서 객체는 
+ * key : value 로 표현됩니다.
+ * 
+ * 객체의 특정 값은 key로 접근이가능합니다.
+ * 예시)
+ * 
+ * const person = {
+ *  name : "김코딩",
+ *  age : 20
+ * }
+ * console.log(person.name) ===> "김코딩"
+ * console.log(person.age) ===> 20
+ */
+
+module.exports = {
+  /**
+   * 어벤져스에는 여러 영웅들이 존재합니다.
+   * 어벤져스에 출연하는 캐릭터와 배우이름을 쌍으로 갖는 객체를 생성해보세요.
+   * IronMan - Robert John Downey Jr.
+   * CaptainAmerica - Christopher Robert Evans
+   * Hulk - Mark Alan Ruffalo
+   * Thor - Chris Hemsworth
+   * 
+   */
+  declareObject_1: function declareObject_1() {
+    return Avengers;
+  },
+  /**
+   * 전달인자로 들어온 arr는 아래와 같은 형태로 들어옵니다.
+   * 0 번째 요소 : 이름(name)
+   * 1 번째 요소 : 레벨(level)
+   * 2 번째 요소 : 직업(job)
+   * 4 번째 요소 : 마지막 위치(lastPoint)
+   * 5 번째 요소 : 랭킹순위(ranking)
+   * 
+   * 해당 arr를 객체로 변환하여 리턴하는 함수를 작성해보세요.
+   * @param {string} arr 
+   */
+  declareObject_2: function declareObject_2(arr) {
+    return '';
+  },
+  /**
+   * 객체에는 문자열, 숫자뿐만 아니라 자바스크립트에서 사용되는 모든 타입을 값으로 가질 수 있습니다.
+   * 어떤 객체에서 함수를 값으로 갖는 경우 이를 무엇이라고 표현하나요?
+   * 1 : 함수
+   * 2 : 클로저
+   * 3 : 스코프
+   * 4 : 메서드
+   * 
+   * 1~4번 보기 중 해당하는 명칭을 아래 함수를 통해 리턴하세요.
+   */
+  whatisMethod: function whatisMethod() {
+    var answer;
+    return answer;
+  },
+  /**
+   * 자바스크립트에서는 브라우저를 가리키는 특정 객체가 있습니다. 해당 객체의 이름은 무엇일까요?
+   * 1: browser
+   * 2: window
+   * 3: window10
+   * 4: windows
+   * 5: chrome
+   */
+  selectBrowser: function selectBrowser() {
+    var answer;
+    return answer;
+  },
+  /**
+   * 자바스크립트에서는 DOM이라는 객체가 있습니다. DOM은 우리가 작성한 HTML 문저에 접근하기 위한 객체입니다.
+   * 해당 객체의 이름은 무엇일까요?
+   * 1: Dom
+   * 2: documents
+   * 3: document
+   * 4: window
+   */
+  selectDom: function selectDom() {
+    var answer;
+    return answer;
+  }
+};
+
+/***/ }),
+
 /***/ "./koans/types.js":
 /*!************************!*\
   !*** ./koans/types.js ***!
@@ -319,6 +440,9 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 var v = __webpack_require__(/*! ../koans/variable */ "./koans/variable.js");
 var t = __webpack_require__(/*! ../koans/types */ "./koans/types.js");
 var a = __webpack_require__(/*! ../koans/array */ "./koans/array.js");
+var o = __webpack_require__(/*! ../koans/object */ "./koans/object.js");
+var f = __webpack_require__(/*! ../koans/function */ "./koans/function.js");
+// const { expect } = require("chai");
 describe("변수와 자료형", function () {
   this.timeout(5000);
   it("변수를 선언하는 방법에 대해 알아봅시다.😁", function (done) {
@@ -393,6 +517,53 @@ describe("배열 기초", function () {
     expect(result).to.have.members(myArr.map(function (el) {
       return el + 5;
     }));
+  });
+  it("전달인자로 들어오는 arr의 요소 중 짝수만 리턴하는 함수를 만드세요", function () {
+    var numbers = [0, 1, 2, 4, 5, 3, 6, 8, 4, 7, 10, 16, 14, 15, 21, 22, 24];
+    var result = a.filter(numbers);
+    expect(result).to.have.members(numbers.filter(function (el) {
+      return el % 2 === 0 ? true : false;
+    }));
+  });
+});
+describe("함수 기초", function () {
+  it("x, y를 전달받아서 x,y 값을 곱한 결과를 리턴하는 함수를 작성해보세요.", function () {
+    var result = f.declareFunction();
+    expect(_typeof(result)).to.be.equals('function');
+    expect(result(5, 10)).to.be.equals(50);
+  });
+});
+describe("객체 기초", function () {
+  it("어벤져스에 출연하는 캐릭터와 배우이름을 쌍으로 갖는 객체를 생성해보세요.", function () {
+    var result = o.declareObject_1();
+    expect(result).to.deep.include({
+      IronMan: "Robert John Downey Jr.",
+      CaptainAmerica: "Christopher Robert Evans",
+      Hulk: "Mark Alan Ruffalo",
+      Thor: "Chris Hemsworth"
+    });
+  });
+  it("전달인자로 들어온 arr 객체로 변환하여 리턴하는 함수를 작성해보세요.", function () {
+    var result = o.declareObject_2("최태호", 30, "프로그래머", "더픽트", 100);
+    expect(result).to.deep.include({
+      name: "최태호",
+      level: 30,
+      job: "프로그래머",
+      lastPoint: "더픽트",
+      ranking: 100
+    });
+  });
+  it("특정 객체에서 함수를 값으로 갖는 경우 이를 무엇이라고 표현하나요?", function () {
+    var result = o.whatisMethod();
+    expect(result).to.be.equals(4);
+  });
+  it("자바스크립트에서는 브라우저를 가리키는 특정 객체가 있습니다. 해당 객체의 이름은 무엇일까요?", function () {
+    var result = o.selectBrowser();
+    expect(result).to.be.equals(2);
+  });
+  it("자바스크립트에서는 DOM이라는 객체가 있습니다. 해당 객체의 이름은 무엇일까요?", function () {
+    var result = o.selectDom();
+    expect(result).to.be.equals(3);
   });
 });
 })();
