@@ -17,10 +17,10 @@ app.use(express.static(__dirname + '/koans'));
 app.use(express.static(__dirname + '/public'));
 
 app.use('/', function(req,res){
-    res.render('index.html');
+    res.render('index.ejs');
 });
 
 
 app.listen(3000, () => {
     console.log(`Example app listening on port 3000`)
-  })
+})

@@ -1,9 +1,6 @@
 const v = require("../koans/variable");
 const t = require("../koans/types");
 const a = require("../koans/array");
-const { expect } = require("chai");
-const { describe } = require("mocha");
-console.log("연결")
 describe("변수와 자료형", function () {
   this.timeout(5000);
   it("변수를 선언하는 방법에 대해 알아봅시다.😁", function (done) {
