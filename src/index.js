@@ -8,7 +8,7 @@ describe("변수와 자료형", function () {
   this.timeout(5000);
   it("변수를 선언하는 방법에 대해 알아봅시다.😁", function () {
     const result = v.variable();
-    expect(result).to.be.equal("안녕하세요. 제 이름은 김코딩입니다.")
+    expect(result).to.be.equal("안녕하세요. 제 이름은 김코딩입니다.");
   });
   it("연산자와 변수를 합성하는 방법에 대해 알아봅시다.😁", function () {
     const result = v.addVariable()[0];
@@ -57,7 +57,7 @@ describe("문자열과 숫자 기초", function (){
   it("문장과 찾고 싶은 단어가 주어지고, 찾고자 하는 단어가 문장에 포함되어 있는 경우 문장 속에서 단어가 시작되는 위치를 반환하는 함수를 작성해보세요", function(){
     const temp = "절대 어제를 후회하지 마라. 인생은 오늘의 나 안에 있고 내일은 스스로 만드는 것이다";
     const result = t.findIndexOfWord(temp, "인생");
-    expect(result).to.be(temp.indexOf("인생"));
+    expect(result).to.be.equals(temp.indexOf("인생"));
   })
 })
 describe("배열 기초", function () {
@@ -85,12 +85,23 @@ describe("배열 기초", function () {
     let numbers = [0,1,2,4,5,3,6,8,4,7,10,16,14,15,21,22,24];
 
     const result = a.filter(numbers);
-    expect(result).to.have.members(numbers.filter(el => el % 2 === 0 ? true : false));
+    expect(result).to.have.members(numbers.filter(el => {
+      if (el === 0) {
+        return false
+      } else {
+        if (el % 2 === 0) {
+          return true
+        }else {
+          return false
+        }
+      }
+    }));
   })  
 })
+
 describe("함수 기초", function () {
   it("x, y를 전달받아서 x,y 값을 곱한 결과를 리턴하는 함수를 작성해보세요.", function(){
-    const result = f.declareFunction();
+    const result = f.declareFunction;
     expect(typeof result).to.be.equals('function');
     expect(result(5, 10)).to.be.equals(50);
   })
@@ -107,7 +118,7 @@ describe("객체 기초", function () {
     })
   })
   it("전달인자로 들어온 arr 객체로 변환하여 리턴하는 함수를 작성해보세요.", function(){
-    const result = o.declareObject_2("최태호", 30, "프로그래머", "더픽트", 100);
+    const result = o.declareObject_2(["최태호", 30, "프로그래머", "더픽트", 100]);
     expect(result).to.deep.include({
       name : "최태호",
       level : 30,

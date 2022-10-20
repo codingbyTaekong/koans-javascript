@@ -21,7 +21,7 @@ module.exports = {
        isActive라는 변수는 true 혹은 false의 값을 가져야 합니다.
    */
     printBoolean : function () {
-       let isActive;
+       let isActive = false;
        return isActive;
     },
     /**
@@ -30,7 +30,7 @@ module.exports = {
         개발을 하다보면 어떨 때 사용하면 좋을지 자연스럽게 알게 됩니다.
     */
     printNull : function() {
-        let isNull;
+        let isNull = null;
         return isNull;
     },
     /**
@@ -38,16 +38,18 @@ module.exports = {
         변수를 생성한 후 값을 할당하지면 해당 변수는 undefined가 출력됩니다.
     */
     printUndefined : function() {
-        let isUndefined = "";
+        let isUndefined = undefined
         return isUndefined;
     },
 
     /**
     *- 숫자와 문자열을 담고 있는 변수를 생성해보세요.
+    "", '', ``
     */
+    
     printStringAndNumber : function() {
-        let myString;
-        let myNumber;
+        let myString = "안녕";
+        let myNumber = 32154684;
         return [myString, myNumber];
     },
 
@@ -65,9 +67,7 @@ module.exports = {
      * 문자열을 소문자로 바꿔주는 함수에 대해서도 찾아서 공부해보세요.
      */
     toUpperCase : function (string) {
-        let result = ""
-
-        return result
+        return string.toUpperCase()
     },
     /**
      * 띄어쓰기를 기준으로 몇 단어를 작성했는지 알려주는 함수를 작성해보세요.
@@ -83,14 +83,16 @@ module.exports = {
      * 띄어쓰기를 기준으로 단어를 나눈다고 했으니 'hello'와 'world' 두 개의 단어가 있습니다.
      */
     printWordslength : function (str) {
-        return str.split(' ').length
+        let result = str.split(' ').length
+        return result
+        // return str.split(' ').length
     },
     /**
      * 문장과 찾고 싶은 단어가 주어지고, 
      * 찾고자 하는 단어가 문장에 포함되어 있는 경우,
      * 문장 속에서 단어가 시작되는 위치를 반환하는 함수를 작성해보세요.
      * 
-     * string.indexOf() 메서드에 대해 공부해보세요!
+     * string.c 메서드에 대해 공부해보세요!
      * 
      * @param {string} sentence 
      * @param {string} word 
@@ -103,7 +105,9 @@ module.exports = {
      * 아웃풋 : 9
      */
     findIndexOfWord : function (sentence, word) {
-        let result;
+        // 문장 : sentence
+        // 단어 : word
+        let result = sentence.indexOf(word);
         return result
     }
     

@@ -26,9 +26,10 @@ module.exports = {
      * 전달인자로 들어오는 배열의 길이를 리턴하는 함수를 작성해보세요.
      */
     length : function (arr) {
-        if (!Array.isArray(arr)) throw new Error("전달인자가 올바르지 않습니다.");
-        let result;
-        return result;
+        // if (!Array.isArray(arr)) throw new Error("전달인자가 올바르지 않습니다.");
+        // let result = arr.length;
+        // return result;
+        return arr.length
     },
     /**
      * 배열은 순서가 있는 리스트 형태의 타입입니다.
@@ -42,6 +43,9 @@ module.exports = {
      */
     sum : function (arr) {
         let sum = 0;
+        arr.forEach(el => {
+          sum += el
+        });
         //
         return sum;
     },
@@ -55,8 +59,9 @@ module.exports = {
      * @param {*} number 
      */
     addFive : function (arr) {
-        let newArr = [];
-
+        let newArr = arr.map(el=> {
+            return el + 5
+        })
         return newArr;
     },
     /**
@@ -69,7 +74,28 @@ module.exports = {
      * 아웃풋 : [2,4,6]
      */
     filter : function(arr) {
-        let newArr = [];
+        let newArr = arr.filter((el, index) => {
+            if (el === 0) {
+                // 배출하면 안된다.
+                return false
+            } else {
+                if(el % 2 === 0) {
+                    // 짝수
+                    return true
+                } else {
+                    // 홀수
+                    return false
+                }
+            }
+            // if (el === 0) {
+            //     return false
+            // } else if (el % 2=== 0) {
+            //     return true
+            // } else {
+            //     return false
+            // }
+
+        });
 
         return newArr;
     },

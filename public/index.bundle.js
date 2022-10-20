@@ -33,9 +33,10 @@ module.exports = {
    * 전달인자로 들어오는 배열의 길이를 리턴하는 함수를 작성해보세요.
    */
   length: function length(arr) {
-    if (!Array.isArray(arr)) throw new Error("전달인자가 올바르지 않습니다.");
-    var result;
-    return result;
+    // if (!Array.isArray(arr)) throw new Error("전달인자가 올바르지 않습니다.");
+    // let result = arr.length;
+    // return result;
+    return arr.length;
   },
   /**
    * 배열은 순서가 있는 리스트 형태의 타입입니다.
@@ -49,6 +50,9 @@ module.exports = {
    */
   sum: function sum(arr) {
     var sum = 0;
+    arr.forEach(function (el) {
+      sum += el;
+    });
     //
     return sum;
   },
@@ -62,7 +66,9 @@ module.exports = {
    * @param {*} number 
    */
   addFive: function addFive(arr) {
-    var newArr = [];
+    var newArr = arr.map(function (el) {
+      return el + 5;
+    });
     return newArr;
   },
   /**
@@ -75,7 +81,28 @@ module.exports = {
    * 아웃풋 : [2,4,6]
    */
   filter: function filter(arr) {
-    var newArr = [];
+    var newArr = arr.filter(function (el, index) {
+      if (el === 0) {
+        // 배출하면 안된다.
+        return false;
+      } else {
+        if (el % 2 === 0) {
+          // 짝수
+          return true;
+        } else {
+          // 홀수
+          return false;
+        }
+      }
+      // if (el === 0) {
+      //     return false
+      // } else if (el % 2=== 0) {
+      //     return true
+      // } else {
+      //     return false
+      // }
+    });
+
     return newArr;
   }
 };
@@ -156,7 +183,7 @@ module.exports = {
    * 5 번째 요소 : 랭킹순위(ranking)
    * 
    * 해당 arr를 객체로 변환하여 리턴하는 함수를 작성해보세요.
-   * @param {string} arr 
+   * @param {string} arr
    */
   declareObject_2: function declareObject_2(arr) {
     return '';
@@ -231,7 +258,7 @@ module.exports = {
      isActive라는 변수는 true 혹은 false의 값을 가져야 합니다.
   */
   printBoolean: function printBoolean() {
-    var isActive;
+    var isActive = false;
     return isActive;
   },
   /**
@@ -240,7 +267,7 @@ module.exports = {
       개발을 하다보면 어떨 때 사용하면 좋을지 자연스럽게 알게 됩니다.
   */
   printNull: function printNull() {
-    var isNull;
+    var isNull = null;
     return isNull;
   },
   /**
@@ -248,15 +275,17 @@ module.exports = {
       변수를 생성한 후 값을 할당하지면 해당 변수는 undefined가 출력됩니다.
   */
   printUndefined: function printUndefined() {
-    var isUndefined = "";
+    var isUndefined = undefined;
     return isUndefined;
   },
   /**
   *- 숫자와 문자열을 담고 있는 변수를 생성해보세요.
+  "", '', ``
   */
+
   printStringAndNumber: function printStringAndNumber() {
-    var myString;
-    var myNumber;
+    var myString = "안녕";
+    var myNumber = 32154684;
     return [myString, myNumber];
   },
   /**
@@ -273,8 +302,7 @@ module.exports = {
    * 문자열을 소문자로 바꿔주는 함수에 대해서도 찾아서 공부해보세요.
    */
   toUpperCase: function toUpperCase(string) {
-    var result = "";
-    return result;
+    return string.toUpperCase();
   },
   /**
    * 띄어쓰기를 기준으로 몇 단어를 작성했는지 알려주는 함수를 작성해보세요.
@@ -290,14 +318,17 @@ module.exports = {
    * 띄어쓰기를 기준으로 단어를 나눈다고 했으니 'hello'와 'world' 두 개의 단어가 있습니다.
    */
   printWordslength: function printWordslength(str) {
-    return str.split(' ').length;
+    var result = str.split(' ').length;
+    return result;
+    // return str.split(' ').length
   },
+
   /**
    * 문장과 찾고 싶은 단어가 주어지고, 
    * 찾고자 하는 단어가 문장에 포함되어 있는 경우,
    * 문장 속에서 단어가 시작되는 위치를 반환하는 함수를 작성해보세요.
    * 
-   * string.indexOf() 메서드에 대해 공부해보세요!
+   * string.c 메서드에 대해 공부해보세요!
    * 
    * @param {string} sentence 
    * @param {string} word 
@@ -310,7 +341,9 @@ module.exports = {
    * 아웃풋 : 9
    */
   findIndexOfWord: function findIndexOfWord(sentence, word) {
-    var result;
+    // 문장 : sentence
+    // 단어 : word
+    var result = sentence.indexOf(word);
     return result;
   }
 
@@ -345,7 +378,7 @@ module.exports = {
   자바스크립트에서 변수를 선언하는 방법으로는 var / let / const가 존재하며,
   var 와 let의 경우 선언한 변수의 값을 재할당이 가능하지만
   const는 변수의 값을 상수화하기 때문에 재할당이 불가능합니다.
-   - 아래의 문자열이 출력되도록 코드를 작성해보세요.
+    - 아래의 문자열이 출력되도록 코드를 작성해보세요.
       출력예시 : 안녕하세요. 제 이름은 김코딩입니다.
   */
   variable: function variable() {
@@ -358,7 +391,7 @@ module.exports = {
   /**
   *< Variable basic 2>
   연산자와 변수를 합성하는 방법에 대해 알아봅시다.
-   - 아래의 문자열이 출력되도록 코드를 작성해보세요.
+    - 아래의 문자열이 출력되도록 코드를 작성해보세요.
       출력예시 : 안녕하세요. 제 이름은 김코딩입니다.
   */
   /**
@@ -367,6 +400,7 @@ module.exports = {
    * @returns Array<String, String>
    */
   addVariable: function addVariable() {
+    var myName = "김코딩";
     var introduction = "안녕하세요. 제 이름은 " + myName + "입니다.";
     // const introduction = `안녕하세요. 제 이름은 ${myName}입니다.`
 
@@ -390,10 +424,10 @@ module.exports = {
       4) 10 나누기 3의 나머지는 0과 같지 않å습니다.
   */
   operator: function operator() {
-    var yourCode_1 = "";
-    var yourCode_2 = "";
-    var yourCode_3 = "";
-    var yourCode_4 = "";
+    var yourCode_1 = 6 + 5 === 11;
+    var yourCode_2 = 100 - 1 !== 101;
+    var yourCode_3 = 9 / 3 === 3;
+    var yourCode_4 = 10 % 3 !== 0;
 
     // 리턴문은 수정하지 마세요🥰
     return [yourCode_1, yourCode_2, yourCode_3, yourCode_4];
@@ -492,7 +526,7 @@ describe("문자열과 숫자 기초", function () {
   it("문장과 찾고 싶은 단어가 주어지고, 찾고자 하는 단어가 문장에 포함되어 있는 경우 문장 속에서 단어가 시작되는 위치를 반환하는 함수를 작성해보세요", function () {
     var temp = "절대 어제를 후회하지 마라. 인생은 오늘의 나 안에 있고 내일은 스스로 만드는 것이다";
     var result = t.findIndexOfWord(temp, "인생");
-    expect(result).to.be(temp.indexOf("인생"));
+    expect(result).to.be.equals(temp.indexOf("인생"));
   });
 });
 describe("배열 기초", function () {
@@ -521,13 +555,21 @@ describe("배열 기초", function () {
     var numbers = [0, 1, 2, 4, 5, 3, 6, 8, 4, 7, 10, 16, 14, 15, 21, 22, 24];
     var result = a.filter(numbers);
     expect(result).to.have.members(numbers.filter(function (el) {
-      return el % 2 === 0 ? true : false;
+      if (el === 0) {
+        return false;
+      } else {
+        if (el % 2 === 0) {
+          return true;
+        } else {
+          return false;
+        }
+      }
     }));
   });
 });
 describe("함수 기초", function () {
   it("x, y를 전달받아서 x,y 값을 곱한 결과를 리턴하는 함수를 작성해보세요.", function () {
-    var result = f.declareFunction();
+    var result = f.declareFunction;
     expect(_typeof(result)).to.be.equals('function');
     expect(result(5, 10)).to.be.equals(50);
   });
@@ -543,7 +585,7 @@ describe("객체 기초", function () {
     });
   });
   it("전달인자로 들어온 arr 객체로 변환하여 리턴하는 함수를 작성해보세요.", function () {
-    var result = o.declareObject_2("최태호", 30, "프로그래머", "더픽트", 100);
+    var result = o.declareObject_2(["최태호", 30, "프로그래머", "더픽트", 100]);
     expect(result).to.deep.include({
       name: "최태호",
       level: 30,

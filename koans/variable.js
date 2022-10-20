@@ -30,6 +30,7 @@ module.exports = {
     * @returns Array<String, String>
     */
     addVariable : function () {
+        const myName = "김코딩"
         const introduction = "안녕하세요. 제 이름은 " + myName + "입니다."
         // const introduction = `안녕하세요. 제 이름은 ${myName}입니다.`
         
@@ -53,10 +54,10 @@ module.exports = {
         4) 10 나누기 3의 나머지는 0과 같지 않å습니다.
     */
     operator : function(){
-        const yourCode_1 = ""; 
-        const yourCode_2 = ""; 
-        const yourCode_3 = ""; 
-        const yourCode_4 = ""; 
+        const yourCode_1 = 6 + 5 === 11; 
+        const yourCode_2 = 100 - 1 !== 101; 
+        const yourCode_3 = 9 / 3 === 3; 
+        const yourCode_4 = 10 % 3 !== 0; 
         
 
         // 리턴문은 수정하지 마세요🥰

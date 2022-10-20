@@ -36,7 +36,7 @@ module.exports = {
      * 5 번째 요소 : 랭킹순위(ranking)
      * 
      * 해당 arr를 객체로 변환하여 리턴하는 함수를 작성해보세요.
-     * @param {string} arr 
+     * @param {string} arr
      */
     declareObject_2 : function (arr) {
         return ''
