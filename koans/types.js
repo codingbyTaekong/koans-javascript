@@ -83,8 +83,7 @@ module.exports = {
      * 띄어쓰기를 기준으로 단어를 나눈다고 했으니 'hello'와 'world' 두 개의 단어가 있습니다.
      */
     printWordslength : function (str) {
-        let result = ""
-        return result;
+        return str.split(' ').length
     },
     /**
      * 문장과 찾고 싶은 단어가 주어지고, 

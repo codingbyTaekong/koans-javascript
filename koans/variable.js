@@ -12,7 +12,7 @@ module.exports = {
     */
     variable : function() {
         // const introduction = "안녕하세요. 제 이름은 김코딩입니다.";
-        const introduction = "";
+        const introduction = "안녕하세요. 제 이름은 김코딩입니다.";
 
         // 리턴문은 수정하지 마세요🥰
         return introduction;

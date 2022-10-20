@@ -6,7 +6,7 @@ const f = require('../koans/function');
 // const { expect } = require("chai");
 describe("변수와 자료형", function () {
   this.timeout(5000);
-  it("변수를 선언하는 방법에 대해 알아봅시다.😁", function (done) {
+  it("변수를 선언하는 방법에 대해 알아봅시다.😁", function () {
     const result = v.variable();
     expect(result).to.be.equal("안녕하세요. 제 이름은 김코딩입니다.")
   });
@@ -52,7 +52,7 @@ describe("문자열과 숫자 기초", function (){
   it("띄어쓰기를 기준으로 몇 단어를 작성했는지 알려주는 함수를 작성해보세요.", function(){
     const temp = "젋음을 낭비하지 마세요.";
     const result = t.printWordslength(temp);
-    expect(result).to.be(temp.split(' ').length);
+    expect(result).to.be.equals(temp.split(' ').length);
   })
   it("문장과 찾고 싶은 단어가 주어지고, 찾고자 하는 단어가 문장에 포함되어 있는 경우 문장 속에서 단어가 시작되는 위치를 반환하는 함수를 작성해보세요", function(){
     const temp = "절대 어제를 후회하지 마라. 인생은 오늘의 나 안에 있고 내일은 스스로 만드는 것이다";

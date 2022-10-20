@@ -290,8 +290,7 @@ module.exports = {
    * 띄어쓰기를 기준으로 단어를 나눈다고 했으니 'hello'와 'world' 두 개의 단어가 있습니다.
    */
   printWordslength: function printWordslength(str) {
-    var result = "";
-    return result;
+    return str.split(' ').length;
   },
   /**
    * 문장과 찾고 싶은 단어가 주어지고, 
@@ -346,12 +345,12 @@ module.exports = {
   자바스크립트에서 변수를 선언하는 방법으로는 var / let / const가 존재하며,
   var 와 let의 경우 선언한 변수의 값을 재할당이 가능하지만
   const는 변수의 값을 상수화하기 때문에 재할당이 불가능합니다.
-    - 아래의 문자열이 출력되도록 코드를 작성해보세요.
+   - 아래의 문자열이 출력되도록 코드를 작성해보세요.
       출력예시 : 안녕하세요. 제 이름은 김코딩입니다.
   */
   variable: function variable() {
     // const introduction = "안녕하세요. 제 이름은 김코딩입니다.";
-    var introduction = "";
+    var introduction = "안녕하세요. 제 이름은 김코딩입니다.";
 
     // 리턴문은 수정하지 마세요🥰
     return introduction;
@@ -359,7 +358,7 @@ module.exports = {
   /**
   *< Variable basic 2>
   연산자와 변수를 합성하는 방법에 대해 알아봅시다.
-    - 아래의 문자열이 출력되도록 코드를 작성해보세요.
+   - 아래의 문자열이 출력되도록 코드를 작성해보세요.
       출력예시 : 안녕하세요. 제 이름은 김코딩입니다.
   */
   /**
@@ -445,7 +444,7 @@ var f = __webpack_require__(/*! ../koans/function */ "./koans/function.js");
 // const { expect } = require("chai");
 describe("변수와 자료형", function () {
   this.timeout(5000);
-  it("변수를 선언하는 방법에 대해 알아봅시다.😁", function (done) {
+  it("변수를 선언하는 방법에 대해 알아봅시다.😁", function () {
     var result = v.variable();
     expect(result).to.be.equal("안녕하세요. 제 이름은 김코딩입니다.");
   });
@@ -488,7 +487,7 @@ describe("문자열과 숫자 기초", function () {
   it("띄어쓰기를 기준으로 몇 단어를 작성했는지 알려주는 함수를 작성해보세요.", function () {
     var temp = "젋음을 낭비하지 마세요.";
     var result = t.printWordslength(temp);
-    expect(result).to.be(temp.split(' ').length);
+    expect(result).to.be.equals(temp.split(' ').length);
   });
   it("문장과 찾고 싶은 단어가 주어지고, 찾고자 하는 단어가 문장에 포함되어 있는 경우 문장 속에서 단어가 시작되는 위치를 반환하는 함수를 작성해보세요", function () {
     var temp = "절대 어제를 후회하지 마라. 인생은 오늘의 나 안에 있고 내일은 스스로 만드는 것이다";
